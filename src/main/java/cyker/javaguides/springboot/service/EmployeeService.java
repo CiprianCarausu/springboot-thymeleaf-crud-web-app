@@ -1,6 +1,7 @@
 package cyker.javaguides.springboot.service;
 
 import cyker.javaguides.springboot.model.Employee;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface EmployeeService {
     void saveEmployee(Employee employee);
     Employee getEmployeeById(Long id);
     void deleteEmployeeById(Long id);
+    Page<Employee> findPaginated(int pageNo, int pageSize);
 }
